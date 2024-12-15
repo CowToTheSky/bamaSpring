@@ -1,6 +1,7 @@
 package org.example.DTO;
 
 public class Student {
-    String name;
-    int age;
+    private void hello(){
+        System.out.println("Hello World！");
+    }
 }
