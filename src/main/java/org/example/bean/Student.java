@@ -1,7 +1,7 @@
-package org.example.DTO;
+package org.example.bean;
 
 public class Student {
-    private void hello(){
+    public void hello(){
         System.out.println("Hello World！");
     }
 }

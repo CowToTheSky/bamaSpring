@@ -1,16 +1,17 @@
 package org.example;
 
 
-import org.example.DTO.Student;
+import org.example.bean.Student;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        //通过反射机制创建对象，通过IoC容器管理的JavaBean是单例模式
-        Student student =(Student) context.getBean("student");
-        System.out.println(student);
-        //手动销毁容器
-        context.close();
+        //ApplicationContext是应用程序上下文的顶层接口，它有很多种实现，这里我们先介绍第一种
+        //因为这里使用的是XML配置文件，所以说我们就使用 ClassPathXmlApplicationContext 这个实现类
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");  //这里写上刚刚的名字
+        Student student = (Student) context.getBean("student");
+        Student student2 = (Student) context.getBean("student");
+        System.out.println(student == student2);
     }
 }
