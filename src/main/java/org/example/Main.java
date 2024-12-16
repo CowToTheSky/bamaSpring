@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.bean.Student;
+import org.example.bean.Teacher;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
