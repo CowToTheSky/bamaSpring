@@ -1,7 +1,11 @@
 package org.example.bean;
 
 public class Student {
-    public void hello(){
-        System.out.println("Hello World！");
+    private Teacher teacher;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+    public void study(){
+        teacher.teach();
     }
 }
