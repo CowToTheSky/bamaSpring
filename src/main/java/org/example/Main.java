@@ -10,8 +10,7 @@ public class Main {
     public static void main(String[] args) {
         //ApplicationContext是应用程序上下文的顶层接口，它有很多种实现，这里我们先介绍第一种
         //因为这里使用的是XML配置文件，所以说我们就使用 ClassPathXmlApplicationContext 这个实现类
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");  //这里写上刚刚的名字
-        Student student = (Student) context.getBean(Student.class);
-        student.study();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");  //这里写上刚刚的名字
+        context.close();
     }
 }

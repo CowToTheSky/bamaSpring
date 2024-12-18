@@ -6,8 +6,8 @@ public class Student {
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
-    public void study(){
-        teacher.teach();
+    Student() {
+        System.out.println("我被构造了");
     }
 }
 
